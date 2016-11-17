@@ -17,11 +17,11 @@ public class Lab1 {
 	public void go() {
 		
 		try {
-			String host = "134.226.56.2";
+			String host = "localhost";
 			//String path = "/~ebarrett/lectures/cs4032/echo.php?message=mingdarui";
 			String path = "/echo.php?message=mingdarui";
 			String responseMsg;
-			sock = new Socket(host, 80);
+			sock = new Socket(host, 8000);
 			InputStreamReader streamReader = new InputStreamReader(sock.getInputStream());
 			reader = new BufferedReader(streamReader);
 			writer = new PrintWriter(sock.getOutputStream());
